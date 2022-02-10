@@ -1,9 +1,27 @@
 html, body {
+    background-color: #00111a;
+    color: #ffffff;
     padding-right: 5%;
     padding-left: 5%;
     display: flex;
     flex-flow: column;
     height: 100%;
+}
+
+a:link {
+    color: #cceeff;
+}
+
+a:visited {
+    color: #b3e6ff;
+}
+
+a:hover {
+    color: #99ddff;
+}
+
+a:active {
+    color: #ffffff;
 }
 
 header {
@@ -18,9 +36,10 @@ footer {
 }
 
 .content {
+    background-color: #002233;
     padding-right: 5%;
     padding-left: 5%;
-    border: 1px solid #000000;
+    border: 1px solid #cceeff;
     flex-grow: 1;
 }
 
