@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>{{ entry.title }}</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="{{category.link}}">{{ category.name or 'JNP-3R.NET' }}</a></h1>
+    </header>
+
+    <div class="content">
+        <article>
+        <h2>{{ entry.title }}</h2>
+
+        <div class="inner-margins">
+            {{ entry.body }}
+            {{ entry.more }}
+        </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>Powered by <a href="https://publ.plaidweb.site">Publ</a></p>
+    </footer>
+</body>
+</html>

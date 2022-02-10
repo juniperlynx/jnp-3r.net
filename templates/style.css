@@ -1,0 +1,29 @@
+html, body {
+    padding-right: 5%;
+    padding-left: 5%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+header {
+    padding: 0.5em;
+    text-align: center;
+}
+
+footer {
+    font-style: italic;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.content {
+    padding-right: 5%;
+    padding-left: 5%;
+    border: 1px solid #000000;
+    flex-grow: 1;
+}
+
+.inner-margins {
+    padding-left: 5%;
+}

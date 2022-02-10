@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>{{ category.name or 'JNP-3R.NET' }}</title>
+</head>
+
+<body>
+    <header>
+        <h1>{{ category.name or 'JNP-3R.NET' }}</h1>
+    </header>
+
+    <div class="content">
+        <h2>Lynx:</h2>
+        <div class="inner-margins">
+            <p>Other places I can be found on the net:</p>
+            <ul>
+                <li><p><a href="https://github.com/juniperlynx">GitHub:</a> Source for project files and code.</p></li>
+                <li><p><a href="https://hackaday.io/juniperlynx">Hackaday.io:</a> Project writeups, pictures, and other information.</p></li>
+                <li><p><a href="https://deviantart.com/juniperlynx">Deviantart:</a> My artwork. Mostly digital and furry.</p></li>
+            </ul>
+        </div>
+
+        <h2>Entries:</h2>
+        <div class="inner-margins">
+            {% for entry in view.entries %}
+                <article>
+                <h2><a href="{{entry.permalink}}">{{ entry.title }}</a></h2>
+                {{ entry.body }}
+
+                {% if entry.more %}
+                    <a rel="more" href="{{entry.permalink}}">Read this entry...</a>
+                {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by <a href="https://publ.plaidweb.site">Publ</a></p>
+    </footer>
+</body>
+</html>
