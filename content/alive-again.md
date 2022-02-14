@@ -4,6 +4,7 @@ Entry-ID: 4
 UUID: 05b9572d-e31a-56a0-a7bf-eb137a0f886f
 
 So I oopsied my data. At least humpty dumpty goes back together easy enough.
+
 .....
 
 I've been trying to use git more recently, so I have both a backup and centralized copy when I work on my projects from different computers, and a way to show off my work.
