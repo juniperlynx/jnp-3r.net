@@ -1,0 +1,5 @@
+# Don't cache cache folder
+__pycache__
+
+# Ignore swap files
+*.swp
