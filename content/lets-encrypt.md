@@ -3,7 +3,7 @@ Date: 2022-02-14 20:20:54+00:00
 Entry-ID: 2
 UUID: ed4cc531-305f-5088-b49f-4bf16030704a
 
-I'm running SSL now, *clicks button* "That was easy..."
+I'm running SSL now! *clicks button* "That was easy..."
 
 .....
 
