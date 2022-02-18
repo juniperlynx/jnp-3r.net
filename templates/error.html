@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="{{static('global-style.css')}}">
+    <title>{{error.code}} {{error.message}}</title>
+</head>
+
+<body>
+    <header>
+        <h1>{{error.code}} {{error.message}}</h1>
+    </header>
+
+    <div class="content">
+        <p>There was an error processing your request.</p>
+        <p>Technical information below:</p>
+
+        <ul>
+            <li>request time: {{arrow.now().format()}}</li>
+            <li>url: <code>{{request.url}}</code></li>
+            <li>path: <code>{{request.path}}</code></li>
+            <li>full_path: <code>{{request.full_path}}</code></li>
+            <li>endpoint: <code>{{request.endpoint}}</code></li>
+            <li>url_rule: <code>{{request.url_rule}}</code></li>
+            {% if exception %}
+                <li>Exception information: {{exception.type}}: {{exception.str}}</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <footer>
+        <p>Powered by <a href="https://publ.plaidweb.site">Publ</a></p>
+    </footer>
+</body>
+</html>

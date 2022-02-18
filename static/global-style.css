@@ -1,6 +1,7 @@
-@import url({{static('fonts/junction/junction.css')}});
+@import url('/static/fonts/junction/junction.css');
 
 html, body {
+    font-family: 'Junction';
     background-color: #00111a;
     color: #ffffff;
     padding-right: 5%;
