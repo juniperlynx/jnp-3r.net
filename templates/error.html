@@ -7,10 +7,11 @@
 
 <body>
     <header>
-        <h1>{{error.code}} {{error.message}}</h1>
+        <img src="{{static('images/site-banner.png')}}" alt="{{ category.name or 'JNP-3R.NET' }}" id="banner">
     </header>
 
     <div class="content">
+        <h2>{{error.code}} {{error.message}}</h2>
         <p>There was an error processing your request.</p>
         <p>Technical information below:</p>
 
