@@ -23,7 +23,7 @@
 
         <h2>Entries:</h2>
         <div class="inner-margins">
-            {% for entry in view.entries %}
+            {% for entry in view(recurse=True,entry_type_not='page') %}
                 <article>
                 <h2><a href="{{entry.permalink}}">{{ entry.title }}</a></h2>
                 {{ entry.body }}
@@ -37,7 +37,7 @@
     </div>
 
     <footer>
-        <span id="credits"><a href="credits.html">Credits</a></span>
+        <span id="credits"><a href="/3-Acknowledgements">Credits</a></span>
         <span id="powered-by">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
     </footer>
 </body>
