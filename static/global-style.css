@@ -44,7 +44,7 @@ footer {
     padding-left: 5%;
     border: 1px solid #cceeff;
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .inner-margins {
