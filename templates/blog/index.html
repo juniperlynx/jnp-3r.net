@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="{{static('global-style.css')}}">
+    <title>{{ category.name or 'JNP-3R.NET' }}</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{static('images/site-banner.png')}}" alt="{{ category.name or 'JNP-3R.NET' }}" id="banner">
+    </header>
+
+    <div class="content">
+        <h2>Entries:</h2>
+        <div class="inner-margins">
+            {% for entry in view(recurse=True,entry_type_not='page') %}
+                <article>
+                <h2><a href="{{entry.permalink}}">{{ entry.title }}</a></h2>
+                {{ entry.body }}
+
+                {% if entry.more %}
+                    <a rel="more" href="{{entry.permalink}}">Read this entry...</a>
+                {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <span id="credits"><a href="/3-Acknowledgements">Credits</a></span>
+        <span id="powered-by">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
+    </footer>
+</body>
+</html>
