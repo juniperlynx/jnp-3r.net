@@ -32,10 +32,13 @@ header {
     text-align: center;
 }
 
+article {
+    padding-bottom: 0.2em;
+}
+
 footer {
-    font-style: italic;
-    text-align: right;
     flex-shrink: 0;
+    padding: 0.5em;
 }
 
 .content {
@@ -48,11 +51,20 @@ footer {
 }
 
 .inner-margins {
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 #banner {
     width: 45%;
     max-width: 550px;
     max-height: 150px;
+}
+
+#credits {
+    float: left;
+}
+
+#powered-by {
+    float: right;
+    font-style: italic;
 }
