@@ -7,10 +7,21 @@
 
 <body>
     <header>
-        <img src="{{static('images/site-banner.png')}}" alt="{{ category.name or 'JNP-3R.NET' }}" id="banner">
+        <img src="{{static('images/site-banner.png')}}" alt="JNP-3R.NET" id="banner">
     </header>
 
     <div class="content">
+        <h2>Welcome!</h2>
+        <div class="inner-margins">
+           <p>Hi there! I'm Juniper. I write code and pretend to be a robot cat on the internet. Here you'll find writing, music, and links to my projects</p>
+           <p>Portfolio coming soon</p>
+        </div>
+
+        <h2>Web Log:</h2>
+        <div class="inner-margins">
+           <p><a href="blog">Click here</a> for writings, musings, and other random junk.</p>
+        </div>
+
         <h2>Lynx:</h2>
         <div class="inner-margins">
             <p>Other places I can be found on the net:</p>
@@ -19,20 +30,6 @@
                 <li><p><a href="https://hackaday.io/juniper">Hackaday.io:</a> Project writeups, pictures, and other information.</p></li>
                 <li><p><a href="https://deviantart.com/juniper-lynx">Deviantart:</a> My artwork. Mostly digital and furry.</p></li>
             </ul>
-        </div>
-
-        <h2>Entries:</h2>
-        <div class="inner-margins">
-            {% for entry in view(recurse=True,entry_type_not='page') %}
-                <article>
-                <h2><a href="{{entry.permalink}}">{{ entry.title }}</a></h2>
-                {{ entry.body }}
-
-                {% if entry.more %}
-                    <a rel="more" href="{{entry.permalink}}">Read this entry...</a>
-                {% endif %}
-                </article>
-            {% endfor %}
         </div>
     </div>
 

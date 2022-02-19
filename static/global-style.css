@@ -1,15 +1,22 @@
 @import url('/static/fonts/junction/junction.css');
 
-html, body {
+html {
+    height: 100%;
+}
+
+body {
+    padding-right: 50px;
+    padding-left: 50px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    overflow-y: hidden;
+    height: 100%;
+
     font-family: 'Junction';
     background-color: #00111a;
     color: #ffffff;
-    padding-right: 5%;
-    padding-left: 5%;
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    overflow-y: hidden;
 }
 
 a:link {
@@ -43,8 +50,9 @@ footer {
 
 .content {
     background-color: #002233;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-top: 1%;
+    padding-right: 3%;
+    padding-left: 3%;
     border: 1px solid #cceeff;
     flex-grow: 1;
     overflow-y: auto;
@@ -55,7 +63,7 @@ footer {
 }
 
 #banner {
-    width: 45%;
+    width: 65%;
     max-width: 550px;
     max-height: 150px;
 }
