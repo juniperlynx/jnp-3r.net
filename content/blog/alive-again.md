@@ -1,6 +1,5 @@
 Title: It's alive! Again...
 Date: 2022-02-09 22:25:23+00:00
-Category: blog/site
 Entry-ID: 4
 UUID: 05b9572d-e31a-56a0-a7bf-eb137a0f886f
 
