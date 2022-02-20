@@ -8,3 +8,8 @@ config = {
     },
 }
 app = publ.publ(__name__, config)
+
+@app.route('/favicon.ico')
+def favicon():
+    """ Send the favicon.ico file directly from this directory """
+    return flask.send_file('favicon.ico')
