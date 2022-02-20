@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <link rel="stylesheet" href="{{static('global-style.css')}}">
-    <title>{{error.code}} {{error.message}}</title>
+    <link rel="stylesheet" href="{{static('global-style.css')}}"/>
+    <title>JNP-3R.net: {{error.code}} {{error.message}}</title>
+    <meta name="author" content="Juniper"/>
+    <meta name="description" content="{{error.code}} {{error.message}}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffd633"/>
 </head>
 
 <body>
     <header>
-        <img src="{{static('images/site-banner.png')}}" alt="{{ category.name or 'JNP-3R.NET' }}" id="banner">
+        <img src="{{static('images/site-banner.png')}}" alt="JNP-3R.net" id="banner">
     </header>
 
-    <div class="content">
+    <main>
+        <a href="/index.html"><p>Go Home...</p></a>
+
         <h2>{{error.code}} {{error.message}}</h2>
         <p>There was an error processing your request.</p>
         <p>Technical information below:</p>
@@ -26,10 +32,16 @@
                 <li>Exception information: {{exception.type}}: {{exception.str}}</li>
             {% endif %}
         </ul>
-    </div>
+    </main>
 
     <footer>
-        <p>Powered by <a href="https://publ.plaidweb.site">Publ</a></p>
+        <span id="footer-left">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+            </a>
+            <a href="/3-Acknowledgements">Credits</a>
+        </span>
+        <span id="footer-right">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
     </footer>
 </body>
 </html>
