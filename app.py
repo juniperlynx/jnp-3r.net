@@ -1,5 +1,6 @@
 import os
 import publ
+import flask
 
 config = {
     'database_config': {
