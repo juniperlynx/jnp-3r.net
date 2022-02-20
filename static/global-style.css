@@ -21,19 +21,19 @@ body {
 }
 
 a:link {
-    color: #cceeff;
+    color: #ffcc00;
 }
 
 a:visited {
-    color: #b3e6ff;
+    color: #cca300;
 }
 
 a:hover {
-    color: #99ddff;
+    color: #ffd633;
 }
 
 a:active {
-    color: #ffffff;
+    color: #ffe066;
 }
 
 h1 {
