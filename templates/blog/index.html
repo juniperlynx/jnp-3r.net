@@ -11,6 +11,8 @@
     </header>
 
     <div class="content">
+        <a href="/index.html"><p>Go Home...</p></a>
+
         <h2>Entries:</h2>
         <div class="inner-margins">
             {% for entry in view(recurse=True,entry_type_not='page') %}
@@ -27,8 +29,8 @@
     </div>
 
     <footer>
-        <span id="credits"><a href="/3-Acknowledgements">Credits</a></span>
-        <span id="powered-by">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
+        <span id="footer-left"><a href="/3-Acknowledgements">Credits</a></span>
+        <span id="footer-right">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
     </footer>
 </body>
 </html>
