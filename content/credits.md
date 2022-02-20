@@ -15,6 +15,6 @@ Thanks to the following folks for providing sofware and assets for this website:
 
 ### [Let's Encrypt and](https://letsencrypt.org/)[ the Certbot team](https://certbot.eff.org/): For their work in making HTTPS accessible and easy to implement.
 
-### [Oracle Cloud Services](https://www.oracle.com/cloud/oracle-cloud-services/) For the free hosting.
+### [Oracle Cloud Services](https://www.oracle.com/cloud/oracle-cloud-services/): For the free hosting.
 
 and thanks to my friends and family for all their support over the years.
