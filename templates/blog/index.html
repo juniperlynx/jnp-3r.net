@@ -17,6 +17,7 @@
     <main>
         <a href="/index.html"><p>Go Home...</p></a>
 
+        <div class="section">
         <h2>Entries:</h2>
         <div class="inner-margins">
             {% for entry in view(recurse=True,entry_type_not='page') %}
@@ -29,6 +30,7 @@
                 {% endif %}
                 </article>
             {% endfor %}
+        </div>
         </div>
     </main>
 

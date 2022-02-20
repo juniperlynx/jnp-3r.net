@@ -72,12 +72,8 @@ footer {
     padding: 0.5em;
 }
 
-.inner-margins {
-    padding-left: 3%;
-}
-
-.inner-float {
-    height: 5em;
+.section {
+    clear: both;
 }
 
 .inner-left {
