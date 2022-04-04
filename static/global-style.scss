@@ -1,0 +1,134 @@
+@import url('/static/fonts/leaguespartan/leaguespartan.css');
+
+$nav-width-fixed: 5rem;
+
+$content-bg: #111d22;
+$content-fg: #d0edfb;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #09202a;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $content-bg;
+    color: $content-fg;
+    box-shadow: 0px 0px 2px 2px #041015;
+}
+
+nav {
+    float: left;
+    height: 100%;
+    background-color: #00334d;
+    color: #cceeff;
+    border-right: 2px solid #ffd633;
+    box-shadow: 2px 0px 2px 0px #090e11;
+
+    a {
+        &:link {
+            color: #b3e4ff;
+        }
+    
+        &:visited {
+            color: #80d2ff;
+        }
+    
+        &:hover {
+            color: #ffd633;
+        }
+    
+        &:active {
+            color: #ffe066;
+        }
+    }
+}
+
+a {
+    &:link {
+        color: #b3e4ff;
+    }
+
+    &:visited {
+        color: #80d2ff;
+    }
+
+    &:hover {
+        color: #ffd633;
+    }
+
+    &:active {
+        color: #ffe066;
+    }
+}
+
+#burger, #toggle {
+    position: absolute;
+    top: 0rem;
+    left: 0.5rem;
+}
+
+#burger {
+    font-size: 4rem;
+}
+
+#toggle {
+    opacity: 0;
+}
+
+#toggle:not(:checked) ~ .drawer {
+    display: none;
+}
+
+.drawer {
+    margin-left: $nav-width-fixed;
+    width: 10rem;
+}
+
+.fixed {
+    margin: 5.5rem 0.5rem 0.5rem;
+    width: $nav-width-fixed;
+}
+
+.content {
+    height: 100%;
+    margin-left: $nav-width-fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner {
+    max-width: 90%;
+}
+
+main {
+    padding: 0 1rem 0;
+    flex: 1 0 auto;
+}
+
+.section {
+    clear: both;
+}
+
+footer {
+    flex-shrink: 0;
+    padding: 0.2rem;
+    background-color: $content-fg;
+    color: $content-bg;
+}
+
+#footer-left {
+    float: left;
+}
+
+#footer-right {
+    float: right;
+    font-style: italic;
+}
