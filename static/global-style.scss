@@ -1,7 +1,8 @@
-@import url('/static/fonts/leaguespartan/leaguespartan.css');
+@import "../static/fonts/junction/junction.css";
+/*@import url("/static/fonts/junction/junction.css");*/
 
+$font-stack: 'junction', serif;
 $nav-width-fixed: 5rem;
-
 $content-bg: #111d22;
 $content-fg: #d0edfb;
 
@@ -10,15 +11,52 @@ html, body {
     width: 100%;
     margin: 0;
     background-color: #09202a;
+    font-family: $font-stack;
+    font-size: 100%;
+}
+
+a {
+    &:link {
+        color: #bee1f4;
+    }
+
+    &:visited {
+        color: #93cdec;
+    }
+
+    &:hover {
+        color: #e0c452;
+    }
+
+    &:active {
+        color: #e8d37d;
+    }
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1.3rem;
 }
 
 .wrapper {
     position: relative;
     height: 100%;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: hidden;
     background-color: $content-bg;
     color: $content-fg;
     box-shadow: 0px 0px 2px 2px #041015;
@@ -26,7 +64,7 @@ html, body {
 
 nav {
     float: left;
-    height: 100%;
+    min-height: 100%;
     background-color: #00334d;
     color: #cceeff;
     border-right: 2px solid #ffd633;
@@ -51,28 +89,10 @@ nav {
     }
 }
 
-a {
-    &:link {
-        color: #b3e4ff;
-    }
-
-    &:visited {
-        color: #80d2ff;
-    }
-
-    &:hover {
-        color: #ffd633;
-    }
-
-    &:active {
-        color: #ffe066;
-    }
-}
-
 #burger, #toggle {
     position: absolute;
     top: 0rem;
-    left: 0.5rem;
+    left: 1rem;
 }
 
 #burger {
@@ -102,15 +122,19 @@ a {
     margin-left: $nav-width-fixed;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 #banner {
+    display: block;
     max-width: 90%;
+    margin: 0 auto 0;
 }
 
 main {
     padding: 0 1rem 0;
     flex: 1 0 auto;
+    padding: 0 1.5rem 0;
 }
 
 .section {
@@ -119,13 +143,35 @@ main {
 
 footer {
     flex-shrink: 0;
-    padding: 0.2rem;
+    padding: 0.3rem 0.4rem 0.2rem;
     background-color: $content-fg;
     color: $content-bg;
+
+    a {
+        &:link {
+            color: #00324d;
+        }
+    
+        &:visited {
+            color: #134d6c;
+        }
+    
+        &:hover {
+            color: #ad911f;
+        }
+    
+        &:active {
+            color: #826d17;
+        }
+    }
 }
 
 #footer-left {
     float: left;
+
+    img {
+        margin: 0 0.2rem -0.1rem 0rem;
+    }
 }
 
 #footer-right {
