@@ -83,7 +83,9 @@ nav #burger {
   padding: 0.5rem;
 }
 nav #burger img {
-  max-width: 100%;
+  max-width: 75%;
+  display: block;
+  margin: 0.5rem auto 0.5rem;
 }
 nav #toggle {
   opacity: 0;
@@ -97,8 +99,8 @@ nav .profile {
   grid-row: 2;
 }
 nav .profile #avatar {
-  width: 10rem;
-  height: 10rem;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 nav .drawer {
   width: 10rem;
@@ -119,7 +121,9 @@ nav .links {
   grid-row: 4;
 }
 nav .links img {
-  max-width: 100%;
+  max-width: 75%;
+  display: block;
+  margin: 0.5rem auto 0.5rem;
 }
 
 .content {
