@@ -1,47 +1,94 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <link rel="stylesheet" href="{{static('global-style.css')}}"/>
-    <title>JNP-3R.net: {{error.code}} {{error.message}}</title>
-    <meta name="author" content="Juniper"/>
-    <meta name="description" content="{{error.code}} {{error.message}}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffd633"/>
-</head>
+<html>
+    <head>
+        <link rel="canonical" href="https://jnp-3r.net"/>
+        <!-- <link rel="stylesheet" href="{{static('global-style.css')}}"/> -->
+        <link rel="stylesheet" href="../static/global-style.css"/>
+        <title>JNP-3R.net</title>
+        <meta name="author" content="Juniper"/>
+        <meta name="description" content="Oops, that&#39s an error"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#ffd633"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+                <input type="checkbox" id="toggle"/>
 
-<body>
-    <header>
-        <img src="{{static('images/site-banner.png')}}" alt="JNP-3R.net" id="banner">
-    </header>
+                <label for="toggle" id="burger"><img alt="Menu" src="../static/images/navbar/burger-128.png" /></label>
 
-    <main>
-        <a href="/index.html"><p>Go Home...</p></a>
+                <div class="profile">
+                    <img id="avatar" alt="Avatar" src="../static/images/avatar-256.png" />
+                </div>
 
-        <h2>{{error.code}} {{error.message}}</h2>
-        <p>There was an error processing your request.</p>
-        <p>Technical information below:</p>
+                <div class="info">
+                    <p>Stuff</p>
+                </div>
 
-        <ul>
-            <li>request time: {{arrow.now().format()}}</li>
-            <li>url: <code>{{request.url}}</code></li>
-            <li>path: <code>{{request.path}}</code></li>
-            <li>full_path: <code>{{request.full_path}}</code></li>
-            <li>endpoint: <code>{{request.endpoint}}</code></li>
-            <li>url_rule: <code>{{request.url_rule}}</code></li>
-            {% if exception %}
-                <li>Exception information: {{exception.type}}: {{exception.str}}</li>
-            {% endif %}
-        </ul>
-    </main>
+                <div class="links">
+                    <p>Work:</p>
+                    <a href="https://github.com/juniperlynx"><img alt="Github" src="../static/images/navbar/github-128.png" /></a>
+                    <a href="https://www.deviantart.com/juniper-lynx"><img alt="DeviantArt" src="../static/images/navbar/da-128.png" /></a>
 
-    <footer>
-        <span id="footer-left">
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
-            </a>
-            <a href="/3-Acknowledgements">Credits</a>
-        </span>
-        <span id="footer-right">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
-    </footer>
-</body>
+                    <p>Contact:</p>
+                    <a href="mailto:juniper@jnp-3r.net"><img alt="Email" src="../static/images/navbar/email-128.png" /></a>
+                    <a href="https://t.me/JuniperLynx"><img alt="Telegram" src="../static/images/navbar/telegram-128.png" /></a>
+                    <a href="https://discordapp.com/users/479858079966429184"><img alt="Discord" src="../static/images/navbar/discord-128.png" /></a>
+                </div>
+    
+                <div class="drawer">
+                    <p>Links:</p>
+                    <ul>
+                        <li><a href="https://portfolio.jnp-3r.net" class="inner-right">Portfolio</a></li>
+                        <li><a href="/blog" class="inner-left">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <header>
+                    <pre>
+<span class="blue">   888888 888b    888 8888888b.          .d8888b.  8888888b. </span><span class="yellow">                       888   </span>
+<span class="blue">    "88b 8888b   888 888   Y88b        d88P  Y88b 888   Y88b </span><span class="yellow">                      888    </span>
+<span class="blue">     888 88888b  888 888    888             .d88P 888    888 </span><span class="yellow">                      888    </span>
+<span class="blue">     888 888Y88b 888 888   d88P            8888"  888   d88P </span><span class="yellow">    88888b.   .d88b.  888888 </span>
+<span class="blue">     888 888 Y88b888 8888888P"  88888       "Y8b. 8888888P"  </span><span class="yellow">    888 "88b d8P  Y8b 888    </span>
+<span class="blue">     888 888  Y88888 888        88888  888    888 888 T88b   </span><span class="yellow">    888  888 88888888 888    </span>
+<span class="blue">     88P 888   Y8888 888               Y88b  d88P 888  T88b  </span><span class="yellow">d8b 888  888 Y8b.     Y88b.  </span>
+<span class="blue">     888 888    Y888 888                "Y8888P"  888   T88b </span><span class="yellow">Y8P 888  888  "Y8888   "Y888 </span>
+<span class="blue">   .d88P                                                     </span><span class="yellow">                             </span>
+<span class="blue"> .d88P"                                                      </span><span class="yellow">                             </span>
+<span class="blue">888P"                                                        </span><span class="yellow">                             </span>
+                    </pre>
+                </header>
+                <main>
+                    <a href="/index.html"><p>Go Home...</p></a>
+
+                    <h2>{{error.code}} {{error.message}}</h2>
+                    <p>There was an error processing your request.</p>
+                    <p>Technical information below:</p>
+            
+                    <ul>
+                        <li>request time: {{arrow.now().format()}}</li>
+                        <li>url: <code>{{request.url}}</code></li>
+                        <li>path: <code>{{request.path}}</code></li>
+                        <li>full_path: <code>{{request.full_path}}</code></li>
+                        <li>endpoint: <code>{{request.endpoint}}</code></li>
+                        <li>url_rule: <code>{{request.url_rule}}</code></li>
+                        {% if exception %}
+                            <li>Exception information: {{exception.type}}: {{exception.str}}</li>
+                        {% endif %}
+                    </ul>
+                </main>
+                <footer>
+                    <span id="footer-left">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+                        </a>
+                        <a href="/3-Acknowledgements">Credits</a>
+                    </span>
+                    <span id="footer-right">Powered by <a href="https://publ.plaidweb.site">Publ</a></span>
+                </footer>
+            </div>
+        </div>
+    </body>
 </html>
