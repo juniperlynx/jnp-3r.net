@@ -1,5 +1,4 @@
-@import "../static/fonts/junction/junction.css";
-/*@import url("/static/fonts/junction/junction.css");*/
+@import url("/static/fonts/junction/junction.css");
 html, body {
   height: 100%;
   width: 100%;
