@@ -71,15 +71,23 @@ p {
 nav {
     position: absolute;
     left: 0;
-    min-height: 100%;
-
+    top: 0;
     background-color: #00334d;
     color: #ffffff;
-    border-right: 2px solid #ffd633;
     text-shadow: 2px 2px 2px #00111a;
-
     display:grid;
-    grid-template-rows: max-content max-content auto max-content;
+
+    @media (min-width: 700px) {
+        min-height: 100%;
+        border-right: 2px solid #ffd633;
+        grid-template-rows: max-content max-content auto max-content;
+    }
+
+    @media (max-width: 700px) {
+        min-width: 100%;
+        border-bottom: 2px solid #ffd633;
+        grid-template-columns: max-content max-content auto max-content;
+    }
 
     a {
         &:link {
@@ -105,7 +113,6 @@ nav {
     }
     
     #burger {
-        font-size: 4rem;
         width: $nav-width-fixed;
         padding: $nav-padding;
     
@@ -123,9 +130,17 @@ nav {
     }
 
     .profile {
-        width: $nav-width-fixed;
-        grid-column: 1;
-        grid-row: 2;
+        @media (min-width: 700px) {
+            width: $nav-width-fixed;
+            grid-column: 1;
+            grid-row: 2;
+        }
+    
+        @media (max-width: 700px) {
+            height: $nav-width-fixed;
+            grid-column: 2;
+            grid-row: 1;
+        }
 
         #avatar {
             width: 7.5rem;
@@ -134,24 +149,50 @@ nav {
     }
 
     .drawer {
-        width: $nav-width-drawer;
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: 4;
+        @media (min-width: 700px) {
+            width: $nav-width-drawer;
+            grid-column: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+    
+        @media (max-width: 700px) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row: 2;
+        }
     }
 
     .info {
-        width: $nav-width-fixed;
         padding: $nav-padding;
-        grid-column: 1;
-        grid-row: 3;
+
+        @media (min-width: 700px) {
+            width: $nav-width-fixed;
+            grid-column: 1;
+            grid-row: 3;
+        }
+    
+        @media (max-width: 700px) {
+            height: $nav-width-fixed;
+            grid-column: 3;
+            grid-row: 1;
+        }
     }
     
     .links {
-        width: $nav-width-fixed;
         padding: $nav-padding;
-        grid-column: 1;
-        grid-row: 4;
+
+        @media (min-width: 700px) {
+            width: $nav-width-fixed;
+            grid-column: 1;
+            grid-row: 4;
+        }
+    
+        @media (max-width: 700px) {
+            height: $nav-width-fixed;
+            grid-column: 4;
+            grid-row: 1;
+        }
 
         img {
             @include navimage;
@@ -160,8 +201,14 @@ nav {
 }
 
 .content {
-    height: 100%;
-    margin-left: $nav-width-fixed + 2 * $nav-padding;
+    @media (min-width: 700px) {
+        margin-left: $nav-width-fixed + 2 * $nav-padding;
+        height: 100%;
+    }
+    @media (max-width: 700px) {
+        margin-top: $nav-width-fixed + 2 * $nav-padding;
+    }
+
     display: flex;
     flex-direction: column;
     overflow-y: auto;

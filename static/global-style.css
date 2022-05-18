@@ -52,13 +52,25 @@ p {
 nav {
   position: absolute;
   left: 0;
-  min-height: 100%;
+  top: 0;
   background-color: #00334d;
   color: #ffffff;
-  border-right: 2px solid #ffd633;
   text-shadow: 2px 2px 2px #00111a;
   display: grid;
-  grid-template-rows: max-content max-content auto max-content;
+}
+@media (min-width: 700px) {
+  nav {
+    min-height: 100%;
+    border-right: 2px solid #ffd633;
+    grid-template-rows: max-content max-content auto max-content;
+  }
+}
+@media (max-width: 700px) {
+  nav {
+    min-width: 100%;
+    border-bottom: 2px solid #ffd633;
+    grid-template-columns: max-content max-content auto max-content;
+  }
 }
 nav a:link {
   color: #cceeff;
@@ -77,7 +89,6 @@ nav #burger, nav #toggle {
   grid-row: 1;
 }
 nav #burger {
-  font-size: 4rem;
   width: 5rem;
   padding: 0.5rem;
 }
@@ -92,32 +103,72 @@ nav #toggle {
 nav #toggle:not(:checked) ~ .drawer {
   display: none;
 }
-nav .profile {
-  width: 5rem;
-  grid-column: 1;
-  grid-row: 2;
+@media (min-width: 700px) {
+  nav .profile {
+    width: 5rem;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+@media (max-width: 700px) {
+  nav .profile {
+    height: 5rem;
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 nav .profile #avatar {
   width: 7.5rem;
   height: 7.5rem;
 }
-nav .drawer {
-  width: 10rem;
-  grid-column: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
+@media (min-width: 700px) {
+  nav .drawer {
+    width: 10rem;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+}
+@media (max-width: 700px) {
+  nav .drawer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+  }
 }
 nav .info {
-  width: 5rem;
   padding: 0.5rem;
-  grid-column: 1;
-  grid-row: 3;
+}
+@media (min-width: 700px) {
+  nav .info {
+    width: 5rem;
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+@media (max-width: 700px) {
+  nav .info {
+    height: 5rem;
+    grid-column: 3;
+    grid-row: 1;
+  }
 }
 nav .links {
-  width: 5rem;
   padding: 0.5rem;
-  grid-column: 1;
-  grid-row: 4;
+}
+@media (min-width: 700px) {
+  nav .links {
+    width: 5rem;
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+@media (max-width: 700px) {
+  nav .links {
+    height: 5rem;
+    grid-column: 4;
+    grid-row: 1;
+  }
 }
 nav .links img {
   max-width: 75%;
@@ -126,12 +177,21 @@ nav .links img {
 }
 
 .content {
-  height: 100%;
-  margin-left: 6rem;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   box-shadow: inset 0px 0px 40px 20px #090e11;
+}
+@media (min-width: 700px) {
+  .content {
+    margin-left: 6rem;
+    height: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .content {
+    margin-top: 6rem;
+  }
 }
 
 header {
