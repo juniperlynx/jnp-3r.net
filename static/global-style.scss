@@ -1,8 +1,8 @@
 @import url("/static/fonts/junction/junction.css");
 
 $font-stack: 'junction', serif;
-$nav-width-fixed: 5rem;
-$nav-width-drawer: 10rem;
+$nav-size-fixed: 5rem;
+$nav-size-drawer: 10rem;
 $nav-padding: 0.5rem;
 $content-bg: #111d22;
 $content-fg: #d0edfb;
@@ -123,8 +123,8 @@ nav {
     }
     
     #burger {
-        width: $nav-width-fixed;
-        height: $nav-width-fixed;
+        width: $nav-size-fixed;
+        height: $nav-size-fixed;
         padding: $nav-padding;
     
         img {
@@ -142,13 +142,13 @@ nav {
 
     .profile {
         @media (min-width: 700px) {
-            width: $nav-width-fixed;
+            width: $nav-size-fixed;
             grid-column: 1;
             grid-row: 2;
         }
     
         @media (max-width: 700px) {
-            height: $nav-width-fixed;
+            height: $nav-size-fixed;
             grid-column: 3;
             grid-row: 1;
         }
@@ -161,7 +161,7 @@ nav {
 
     .drawer {
         @media (min-width: 700px) {
-            width: $nav-width-drawer;
+            width: $nav-size-drawer;
             grid-column: 2;
             grid-row-start: 1;
             grid-row-end: 3;
@@ -179,7 +179,7 @@ nav {
         padding: $nav-padding;
 
         @media (min-width: 700px) {
-            width: $nav-width-fixed;
+            width: $nav-size-fixed;
             grid-column: 1;
             grid-row: 3;
         }
@@ -201,10 +201,10 @@ nav {
     right: 0; 
     bottom: 0;
     @media (min-width: 700px) {
-        margin-left: $nav-width-fixed + 2 * $nav-padding;
+        margin-left: $nav-size-fixed + 2 * $nav-padding;
     }
     @media (max-width: 700px) {
-        margin-top: $nav-width-fixed + 2 * $nav-padding;
+        margin-top: $nav-size-fixed + 2 * $nav-padding;
     }
 
     display: flex;
