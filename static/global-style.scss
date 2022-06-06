@@ -2,7 +2,7 @@
 
 $font-stack: 'junction', serif;
 $nav-size-fixed: 5rem;
-$nav-size-drawer: 10rem;
+$nav-size-drawer: 15rem;
 $nav-padding: 0.5rem;
 $content-bg: #111d22;
 $content-fg: #d0edfb;
@@ -162,12 +162,14 @@ nav {
     .drawer {
         @media (min-width: 700px) {
             width: $nav-size-drawer;
+            margin-left: 2.5rem;
             grid-column: 2;
             grid-row-start: 1;
             grid-row-end: 3;
         }
     
         @media (max-width: 700px) {
+            margin-left: 1.5rem;
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row: 2;
