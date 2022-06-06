@@ -63,7 +63,7 @@ nav {
   nav {
     min-height: 100%;
     border-right: 2px solid #ffd633;
-    grid-template-rows: max-content max-content auto max-content;
+    grid-template-rows: max-content auto max-content;
   }
 }
 @media (max-width: 700px) {
@@ -91,12 +91,22 @@ nav #burger, nav #toggle {
 }
 nav #burger {
   width: 5rem;
+  height: 5rem;
   padding: 0.5rem;
 }
 nav #burger img {
   max-width: 65%;
   display: block;
-  margin: 0.5rem auto 0.5rem;
+}
+@media (min-width: 700px) {
+  nav #burger img {
+    margin: 0.5rem auto 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  nav #burger img {
+    margin: auto 0.5rem auto;
+  }
 }
 nav #toggle {
   opacity: 0;
@@ -127,7 +137,7 @@ nav .profile #avatar {
     width: 10rem;
     grid-column: 2;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
   }
 }
 @media (max-width: 700px) {
@@ -137,21 +147,6 @@ nav .profile #avatar {
     grid-row: 2;
   }
 }
-nav .info {
-  padding: 0.5rem;
-}
-@media (min-width: 700px) {
-  nav .info {
-    width: 5rem;
-    grid-column: 1;
-    grid-row: 3;
-  }
-}
-@media (max-width: 700px) {
-  nav .info {
-    display: none;
-  }
-}
 nav .links {
   padding: 0.5rem;
 }
@@ -159,7 +154,7 @@ nav .links {
   nav .links {
     width: 5rem;
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 3;
   }
 }
 @media (max-width: 700px) {
@@ -170,7 +165,16 @@ nav .links {
 nav .links img {
   max-width: 65%;
   display: block;
-  margin: 0.5rem auto 0.5rem;
+}
+@media (min-width: 700px) {
+  nav .links img {
+    margin: 0.5rem auto 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  nav .links img {
+    margin: auto 0.5rem auto;
+  }
 }
 
 .content {

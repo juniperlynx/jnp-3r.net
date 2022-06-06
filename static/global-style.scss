@@ -10,7 +10,14 @@ $content-fg: #d0edfb;
 @mixin navimage {
     max-width: 65%;
     display: block;
-    margin: 0.5rem auto 0.5rem;
+
+    @media (min-width: 700px) {
+        margin: $nav-padding auto $nav-padding;
+    }
+
+    @media (max-width: 700px) {
+        margin: auto $nav-padding auto;
+    }
 }
 
 html, body {
@@ -81,7 +88,7 @@ nav {
     @media (min-width: 700px) {
         min-height: 100%;
         border-right: 2px solid #ffd633;
-        grid-template-rows: max-content max-content auto max-content;
+        grid-template-rows: max-content auto max-content;
     }
 
     @media (max-width: 700px) {
@@ -115,6 +122,7 @@ nav {
     
     #burger {
         width: $nav-width-fixed;
+        height: $nav-width-fixed;
         padding: $nav-padding;
     
         img {
@@ -154,7 +162,7 @@ nav {
             width: $nav-width-drawer;
             grid-column: 2;
             grid-row-start: 1;
-            grid-row-end: 4;
+            grid-row-end: 3;
         }
     
         @media (max-width: 700px) {
@@ -164,19 +172,6 @@ nav {
         }
     }
 
-    .info {
-        padding: $nav-padding;
-
-        @media (min-width: 700px) {
-            width: $nav-width-fixed;
-            grid-column: 1;
-            grid-row: 3;
-        }
-    
-        @media (max-width: 700px) {
-            display: none;
-        }
-    }
     
     .links {
         padding: $nav-padding;
@@ -184,7 +179,7 @@ nav {
         @media (min-width: 700px) {
             width: $nav-width-fixed;
             grid-column: 1;
-            grid-row: 4;
+            grid-row: 3;
         }
     
         @media (max-width: 700px) {
