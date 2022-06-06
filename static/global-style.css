@@ -88,6 +88,8 @@ nav a:active {
 nav #burger, nav #toggle {
   grid-column: 1;
   grid-row: 1;
+  display: grid;
+  align-items: center;
 }
 nav #burger {
   width: 5rem;

@@ -118,6 +118,8 @@ nav {
     #burger, #toggle {
         grid-column: 1;
         grid-row: 1;
+        display: grid;
+        align-items: center;
     }
     
     #burger {
