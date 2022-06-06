@@ -57,6 +57,7 @@ nav {
   color: #ffffff;
   text-shadow: 2px 2px 2px #00111a;
   display: grid;
+  z-index: 2;
 }
 @media (min-width: 700px) {
   nav {
@@ -69,7 +70,7 @@ nav {
   nav {
     min-width: 100%;
     border-bottom: 2px solid #ffd633;
-    grid-template-columns: max-content max-content auto max-content;
+    grid-template-columns: max-content auto max-content;
   }
 }
 nav a:link {
@@ -93,7 +94,7 @@ nav #burger {
   padding: 0.5rem;
 }
 nav #burger img {
-  max-width: 75%;
+  max-width: 65%;
   display: block;
   margin: 0.5rem auto 0.5rem;
 }
@@ -113,7 +114,7 @@ nav #toggle:not(:checked) ~ .drawer {
 @media (max-width: 700px) {
   nav .profile {
     height: 5rem;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
   }
 }
@@ -132,7 +133,7 @@ nav .profile #avatar {
 @media (max-width: 700px) {
   nav .drawer {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row: 2;
   }
 }
@@ -148,9 +149,7 @@ nav .info {
 }
 @media (max-width: 700px) {
   nav .info {
-    height: 5rem;
-    grid-column: 3;
-    grid-row: 1;
+    display: none;
   }
 }
 nav .links {
@@ -165,27 +164,30 @@ nav .links {
 }
 @media (max-width: 700px) {
   nav .links {
-    height: 5rem;
-    grid-column: 4;
-    grid-row: 1;
+    display: none;
   }
 }
 nav .links img {
-  max-width: 75%;
+  max-width: 65%;
   display: block;
   margin: 0.5rem auto 0.5rem;
 }
 
 .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   box-shadow: inset 0px 0px 40px 20px #090e11;
+  z-index: 1;
 }
 @media (min-width: 700px) {
   .content {
     margin-left: 6rem;
-    height: 100%;
   }
 }
 @media (max-width: 700px) {
@@ -198,6 +200,19 @@ header {
   flex-shrink: 0;
   text-align: center;
   text-shadow: 2px 3px 4px #000000;
+}
+header pre {
+  font-family: monospace;
+}
+@media (min-width: 700px) {
+  header pre {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 700px) {
+  header pre {
+    font-size: 0.65rem;
+  }
 }
 header .blue {
   color: #99ddff;
